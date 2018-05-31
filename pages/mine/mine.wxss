@@ -1,0 +1,26 @@
+/* pages/mine/mine.wxss */
+.borderBottomSolid{
+   border-bottom:  #666666 solid 1px;
+}
+.mineTitleClass{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.imageRightClass{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.authorClass{
+  /* font-style: italic; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: underline;
+}
+.snClass{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}

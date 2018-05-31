@@ -1,0 +1,68 @@
+.fangyanClass{
+  display: flex;
+  /* justify-content:flex-end; */
+   font-size:20pt;
+  font-weight:800;
+   border-bottom:  black solid 3px;
+}
+.fangyanORcitiao{
+   border-right: black solid 2px; 
+   border-bottom:  black solid 1px;
+}
+.everyoneClass{  
+   border-bottom:  #ebebeb solid 1px;
+}
+.blackBorderYellowBack{
+  border: 1px solid #ebebeb;
+  background-color: #ebebeb;
+}
+.citiaoClass{
+  display: flex;
+  justify-content:flex-start;
+  font-size:20pt;   
+  font-weight:800;
+  border-bottom:  black solid 1px;
+}
+
+.ruleClassInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  text-decoration: underline;
+  font-size:7pt;
+}
+.ruleRightClass{  
+  display: flex;
+  justify-content: flex-end;
+}
+
+.indexClass{
+  font-size:16pt; 
+}
+.nickNameClass{  
+  display: flex;
+  align-items: center;
+  font-size:12pt;
+  font-weight:bold;
+}
+.termInfoClass{
+  display: flex;
+  align-items: center;
+  font-size:12pt;
+}
+.zanNumClass{
+  display: flex;
+  align-items: center;
+  font-size:10pt;
+}
+.tingNumClass{
+  display: flex;
+  align-items: center;
+  font-size:10pt;
+}
+.userAddressClass{
+  display: flex;
+  align-items: center;
+  font-size:9pt;
+}

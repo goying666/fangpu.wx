@@ -1,0 +1,9 @@
+/* pages/release/release.wxss */
+
+.submitMyTerms{
+  color: white;
+  background-color: #CC6600;
+}
+.titleClass{
+  font-weight: 600;
+}

@@ -1,0 +1,40 @@
+/* pages/search/search.wxss */
+.searchBackColor{
+  background-color: #cdc7aa;
+}
+.blackBorder{  
+  border: 1px solid black;
+  /* border-style: black solid 400; */
+  /* border-color:black; */
+} 
+.locationClass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.displayFlexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ruleClass{  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-style: italic;
+  text-decoration: underline;
+  font-size:9pt;
+}
+
+.inputBorder {
+  border: #ffffff solid 100;
+  /* outline-color: #ffffff; */
+  background-color: white;
+}
+
+.addressClass{
+  display: flex;
+  justify-content: flex-start;
+}

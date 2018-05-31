@@ -1,0 +1,83 @@
+<view class='placeCenter allBackColor' style="width: 100%;height: 100%;">
+  <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+    <view class='displayFlexRow' style="width: 95%;height: 10vh;">
+      <view class='titleCitiaoClass' style="width: 25%;height: 100%; font-size:22pt;font-weight:bold;">词条</view>
+      <view class='displayFlexColumn' style="width: 75%;height: 100%;">
+        <!-- <view class='TermRuleClass' style="width: 100%;height: 40%;">规则说明</view> -->
+        <view class='displayFlexRow' style="width: 100%;height: 100%;">
+          <view class='titleCitiaoClass' style="width: 33%;height: 100%; font-size:9pt;font-weight:300;">方言:{{termInfo.recordingnum}}</view>
+          <view class='titleCitiaoClass' style="width: 33%;height: 100%; font-size:9pt;font-weight:300;">总赞:{{termInfo.zannum}}</view>
+          <!-- <view class='titleCitiaoClass' style="width: 33%;height: 100%; font-size:9pt;font-weight:300;">总听:{{termInfo.tingnum}}</view> -->
+        </view>
+      </view>
+    </view>
+    <view class='displayFlexColumn' style="width: 90%;height: 31.5vh;">
+      <view class='placeCenter blackBorderBottom' style="width: 100%;height: 27%; font-size:11pt;">"{{termInfo.content}}"</view>
+      <view class='displayFlexRow' style="width: 100%;height: 44%;">
+        <view class='displayFlexColumn' style="width: 75%;height: 100%;">
+          <view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">分类： {{termInfo.termclass}}</view>
+          <view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">作者： {{termInfo.usernickname}}</view>
+          <view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">时间： {{termInfo.addtime}}</view>
+          <scroll-view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">方言地：{{termInfo.address}}</scroll-view>
+        </view>
+        <view class='placeCenter' style="width: 25%;height: 100%;">
+          <image src='{{termInfo.useravatarurl}}' style="width: 85%;height: 85%;"></image>
+        </view>
+      </view>
+      <view class='displayFlexRow' style="width: 100%;height: 19%;">
+        <view class='termNoteClass' style="width: 16%;height: 100%; font-size:9pt;">备注：</view>
+        <view style="width: 84%;height: 100%; font-size:9pt;">{{termInfo.introduce}}</view>
+      </view>
+      <view class='displayFlexRow blackBorderBottom' style="width: 100%;height: 8%; ">
+        <view class='shoucangClass' style="width: 50%;height: 100%;font-size:9pt;">收藏</view>
+        <view class='jubaoClass' style="width: 50%;height: 100%;font-size:9pt;">举报</view>
+      </view>
+    </view>
+
+    <view class='displayFlexColumn' style="width: 90%;height: 45vh;">
+      <view class='displayFlexRow ' style="width: 95%;height: 5vh;">
+        <view class='fangyanLeftUse' style="width: 50%;height: 5vh;font-size:8pt;">方言：{{termInfo.recordingnum}}</view>
+        <view class='chooseRightUse' style="width: 25%;height: 5vh;font-size:8pt;">时间</view>
+        <view class='chooseRightUse' style="width: 25%;height: 5vh;font-size:8pt;">点赞</view>
+      </view>
+
+       
+      <scroll-view  scroll-y="true" style="width: 100%;height: 40vh;">
+        <view wx:if="{{scrollViewCondition}}" class='displayFlexColumn ' wx:for="{{allrecordings}}" wx:for-item="recordingsResItem" data-id="{{index}}" style="width: 100%;height: 10vh;" bindtap='gotoRecordingPage'>
+          <view  class='displayFlexRow blackBorderBottom' style="width: 95%;height: 100%;">
+            <view class='placeCenter' style="width: 20%;height: 100%;">
+              <image src='{{allrecordings[size - index -1].useravatarurl}}' style='width: 75%;height: 75%;'></image>
+            </view>
+            <view class='displayFlexColumn' style="width: 80%;height: 100%;">
+              <view class='displayFlexRow' style="width: 100%;height: 100%;">
+                 <view class='fangyanLeftUse' style="width: 50%;height: 100%;font-size:10pt;">{{allrecordings[size - index -1].usernickname}}</view> 
+                <scroll-view class='placeCenter' style="width: 50%;height: 100%;font-size:7pt;">{{allrecordings[size - index -1].address}}</scroll-view>
+              </view>
+              <view class='displayFlexRow' style="width: 100%;height: 100%;">
+                <view class='fangyanLeftUse' style="width: 50%;height: 100%;font-size:8pt;">{{allrecordings[size - index -1].addtime}}</view>
+                <!-- <view class='fangyanLeftUse' style="width: 25%;height: 100%;font-size:8pt;">听：{{allrecordings[size - index -1].tingnum}}</view> -->
+                 <view class='fangyanLeftUse' style="width: 25%;height: 100%;font-size:8pt;"></view> 
+                <view class='fangyanLeftUse' style="width: 25%;height: 100%;font-size:8pt;">赞：{{allrecordings[size - index -1].zannum}}</view>
+              </view>
+            </view>
+          </view>
+        </view>    
+      <view class='placeCenter' style="width: 100%;height:11vh; font-size:8pt;">没有更多了</view>    
+      </scroll-view>
+    </view>
+    <view class='displayFlexColumn' style="width: 90%;height: 13.5vh;">
+      <view class='placeCenter' style="width: 90%;height: 35%;font-size:7pt;">点击上方已发布的方言，听听看人家是怎么说的。</view>
+      <button class='placeCenter buttonBackgroundColor' style="width: 90%;height: 50%;font-size:12pt;" bindtap='gotoReleaseRecording'>发布该词条方言</button>
+    </view>
+  </view>
+</view>
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>

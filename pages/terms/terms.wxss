@@ -1,0 +1,59 @@
+
+.titleCitiaoClass{
+  display: flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.TermRuleClass{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-style: italic;
+  text-decoration: underline;
+  font-size:7pt;
+}
+
+.blackBorderBottom{  
+  border-bottom:  black solid 1px;
+}
+.termStyleClass{
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+.termNoteClass{
+  display: flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.shoucangClass{
+  display: flex;
+  align-items:center;
+  font-style: italic;
+  color: #666666;
+  justify-content:flex-start;
+}
+.jubaoClass{
+  display: flex;
+  align-items:center;
+  font-style: italic;
+  justify-content:flex-end;
+  color: #666666;
+}
+.fangyanLeftUse{
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+.chooseRightUse{
+  display: flex;
+  align-items:center;
+  justify-content:flex-end;
+  margin-right: 10px;
+}
+.bottomCenterUse{  
+  display: flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}

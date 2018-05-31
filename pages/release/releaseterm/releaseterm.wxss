@@ -1,0 +1,12 @@
+
+.borderBottomSolid{
+   border-bottom:  #666666 solid 1px;
+}
+.termsRuleClass{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-style: italic;
+  text-decoration: underline;
+  font-size:7pt;
+}

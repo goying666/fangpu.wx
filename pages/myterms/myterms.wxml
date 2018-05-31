@@ -1,0 +1,45 @@
+<view class='placeCenter allBackColor' style="width: 100%;height: 100%;">
+  <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+    <view class='titleClassCitiao borderBottomSolid' style="width: 90%;height: 8vh;font-size:13pt;">
+
+      <view class='titleClassCitiao' style="width: 60%;height: 8vh;font-size:13pt;">我的词条（条）:{{size}}</view>
+      <button class='placeCenter buttonBackgroundColor' hidden='{{okButton}}' style="width: 60%;height: 50%;font-size:12pt;" bindtap='okButtonTap'>删除选中项</button>
+    </view>
+    <view class='displayFlexColumn' style="width: 100%;height: 82vh;">
+
+      <scroll-view scroll-y="true" style="width: 100%;height: 100%;">
+        <view class='contentRowClass' wx:if="{{scrollViewCondition}}" class='displayFlexColumnReverse ' wx:for="{{allMyTerms}}" data-id="{{index}}" bindtap='selectOneTerm' style="width: 100%;height: 13vh;">
+          <view class='displayFlexColumn bottomLineClass contentRowClass' style="width: 95%;height: 95%;">
+            <view class='displayFlexRow' style="width: 100%;height: 60%;font-size:13pt;">
+              <scroll-view class='placeStart' style="width: 95%;height: 100%;font-size:13pt;">"{{allMyTerms[size - index -1].content}}"</scroll-view>
+              <image class='deleteClass' hidden='{{deleteHidden}}' src='{{deletesrc[size - index -1]}}' style='width:15px;height:15px'></image>
+            </view>
+            <view class='displayFlexRow' style="width: 100%;height: 40%;">
+              <view class='placeCenter' style="width: 18%;height: 100%;font-size:8pt;">赞：{{allMyTerms[size - index -1].zannum}}</view>
+              <view class='placeCenter' style="width: 18%;height: 100%;font-size:8pt;">回：{{allMyTerms[size - index -1].recordingnum}}</view>
+              <!-- <view class='placeCenter' style="width: 18%;height: 100%;font-size:8pt;">听：{{allMyTerms[size - index -1].tingnum}}</view> -->
+
+              <view class='placeCenter' style="width: 46%;height: 100%;font-size:8pt;">{{allMyTerms[size - index -1].addtime}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='placeCenter' style="width: 100%;height:11vh; font-size:8pt;">没有更多了</view>
+      </scroll-view>
+
+    </view>
+    <view class='placeCenter' style="width: 90%;height: 10vh;">
+      <!-- <button class='placeCenter buttonBackgroundColor' style="width: 95%;height: 70%;font-size:13pt;" bindtap='controllAllButton'>{{allControllText}}</button> -->
+    </view>
+
+  </view>
+</view>
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>

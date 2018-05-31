@@ -1,0 +1,93 @@
+<view class='displayFlexColumn allBackColor' style="width: 100%;height: 100%;">
+  <view class='displayFlexRow' style="width: 100%;height: 10vh;">
+    <view class='placeCenter' style="width: 45%;height: 100%;font-size:23pt;font-weight:800;" bindtap='gotoTest'>发布方言</view>
+    <!-- <view class='termsRuleClass' style="width: 52%;height: 100%;font-size:10pt;">规则说明</view> -->
+  </view>
+  <view class='placeCenter' style="width: 80%;height: 25vh;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='placeCenter borderBottomSolid' style="width: 100%;height: 40%;">
+        <view class='placeCenter' style="width: 85%;height: 100%;">"{{thisTerm.content}}"</view>
+      </view>
+      <!-- <view class='placeCenter' style="width: 100%;height: 70%;"> -->
+      <view class='displayFlexRow' style="width: 100%;height: 60%;">
+        <view class='displayFlexColumn' style="width: 70%;height: 100%;">
+          <view class='displayFlexRow' style="width: 100%;height: 25%;">
+            <view class='titleClass' style="width: 30%;height: 100%;font-size:8pt;">分类:</view>
+            <view class='titleClass' style="width: 70%;height: 100%;font-size:8pt;">{{thisTerm.termclass}}</view>
+          </view>
+          <view class='displayFlexRow' style="width: 100%;height: 25%;">
+            <view class='titleClass' style="width: 30%;height: 100%;font-size:8pt;">发布人:</view>
+            <view class='titleClass' style="width: 70%;height: 100%;font-size:8pt;">{{recordingInfo.usernickname}}</view>
+          </view>
+          <view class='displayFlexRow' style="width: 100%;height: 25%;">
+            <view class='titleClass' style="width: 30%;height: 100%;font-size:8pt;">方言地:</view>
+            <view class='titleClass' style="width: 70%;height: 100%;font-size:8pt;">{{recordingInfo.address}}</view>
+          </view>
+          <view class='displayFlexRow' style="width: 100%;height: 25%;">
+            <view class='titleClass' style="width: 30%;height: 100%;font-size:8pt;">发布时间:</view>
+            <view class='titleClass' style="width: 70%;height: 100%;font-size:8pt;">{{recordingInfo.addtime}}</view>
+          </view>
+        </view>
+        <view class='placeCenter' style="width: 30%;height: 100%;">
+          <image src='{{recordingInfo.useravatarurl}}' style="width: 80%;height: 80%;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view  style="width: 80%;height: 5vh;"></view>
+  <view class='displayFlexColumn placeCenter' style="width: 100%;height: 23vh;">
+    <view class='displayFlexColumn placeBottom' style="width: 100%;height: 50%;">
+      <button class='placeCenter buttonBackgroundColor' style="width: 60%;height: 60%;font-size:12pt;"  open-type="{{opentypeValue}}" bindtouchstart="recordStart" bindopensetting="getrecordscope" loading="{{loading}}"  bindtouchend="recordStop">{{recordingButton}}</button>
+      <view class='placeCenter' style="width: 100%;height: 34%;font-size:8pt;">时间需小于10秒</view>
+    </view>
+    <view class='displayFlexColumn placeCenter' style="width: 100%;height: 50%;">
+
+      <button class='placeCenter buttonBackgroundColor' style="width: 60%;height: 50%;font-size:12pt;" bindtap='playButton'>回放</button>
+      <view class='placeCenter' style="width: 100%;height: 34%;font-size:8pt;">听一下，没录好再录</view>
+    </view>
+  </view>
+   <view class='placeCenter' style="width: 100%;height: 25vh;">
+     <!-- <image class='placeCenter' src='/images/2.png' style="width: 90%;height: 100%;"></image>  -->
+  </view> 
+  <view class='displayFlexRow' style="width: 100%;height: 12vh;">
+    <view class='displayFlexColumn placeCenter' style="width: 50%;height: 100%;">
+      <button class='placeCenter buttonBackgroundColor' style="width: 70%;height: 40%;font-size:11pt;" bindtap='cancleSubmitButton'>取消发布</button>
+      <view class='placeCenter' style="width: 50%;height: 20%;font-size:8pt;">清空内容并退出</view>
+    </view>
+    <view class='displayFlexColumn placeCenter' style="width: 50%;height: 100%;">
+      <button class='placeCenter buttonBackgroundColor' style="width: 70%;height: 40%;font-size:11pt;" bindtap='submitRecording'>确认发布</button>
+      <view class='placeCenter' style="width: 50%;height: 20%;font-size:8pt;">发布该词条</view>
+    </view>
+  </view>
+</view>
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>
+<view class='loadingclass' hidden="{{playFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/huifang.gif' style="width: 260px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">回放中</view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='loadingclass' hidden="{{playFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/huifang.gif' style="width: 260px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">回放中</view>
+    </view>
+  </view>
+</view> -->

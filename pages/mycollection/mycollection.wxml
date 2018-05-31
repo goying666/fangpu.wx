@@ -1,0 +1,6 @@
+<!--pages/mycollection/mycollection.wxml-->
+<view class='displayFlexRow' style="width: 100%;height: 8vh;font-size:13pt;">
+  <text style="width: 50%;height: 8vh;font-size:13pt;">阿里巴巴与四十大盗阿里巴巴与四十大盗阿里巴巴与四十大盗</text>
+  <scroll-view  class='placeCenter'  scroll-x="true" style="width: 50%;height: 8vh;font-size:13pt;">阿里巴巴与四十大盗阿里巴巴与四十大盗阿里巴巴与四十大盗阿里巴巴与四十大盗阿里巴巴与四十大盗阿里巴巴与四十大盗</scroll-view>
+
+</view>

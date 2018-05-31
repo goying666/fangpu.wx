@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" style='width: 100%; height:30vh;'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class='displayFlexColumn' style='width: 100%; height:30vh;'>
+    <view class='displayFlexRow' style='width: 80%; height:50%;'>
+      <view class='placeCenter' style='width: 25%; height:50%;'>
+        <image class='placeCenter' src='/images/qing.png' style='width: 40px; height:40px;'>
+        </image>
+      </view>
+      <view class='displayFlexRow' style='width: 60%; height:50%;'>
+        <button class='placeCenter buttonBackgroundColor' bindtap='bindOpenShow' style='width: 100%; height:100%; font-size:12pt;'>开始我的查询</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">{{indexLog}}</view>
+    </view>
+  </view>
+</view>

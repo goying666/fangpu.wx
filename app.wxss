@@ -1,0 +1,93 @@
+/**app.wxss**/
+.allBackColor{
+  background-color: #ebebeb;
+  color: #000000;
+}
+.citiaoBackColor{
+  background-color: #a7a37e;
+}
+.contentRowClass{
+  background-color: #ffffff;
+}
+.bottomLineClass{
+   border-bottom: #ebebeb solid 1.1px;
+}
+.buttonBackgroundColor{
+  background-color: #46c11a;
+  color: white;
+}
+.deleteClass{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.displayFlexRow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.displayFlexColumnReverse{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.displayFlexColumn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.placeCenter{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.placeStart{
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+.placeTop{
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+.loadingclass{
+  position: absolute;
+  top:32%;
+  left: 25%;
+  background-color: #f6f6f6;
+}
+.loadingpictureClass{
+  display: flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.loadingtextClass{
+  display: flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.goyingClass{
+  position: absolute;
+  top:32%;
+  left: 9%;
+  background-color: #c8c5b8;
+
+}
+
+
+
+.borderbottom1px{
+   border-bottom:  white solid 1px;
+}

@@ -1,0 +1,58 @@
+<view class='displayFlexColumn allBackColor' style="width: 100%;height: 100%;">
+  <view class='displayFlexRow' style="width: 100%;height: 10vh;">
+    <view class='placeCenter' style="width: 45%;height: 100%;font-size:23pt;font-weight:800;">发布词条</view>
+    <!-- <view class='termsRuleClass' style="width: 52%;height: 100%;font-size:10pt;">规则说明</view> -->
+  </view>
+  <view class='placeCenter' style="width: 80%;height: 40vh;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='placeCenter borderBottomSolid' style="width: 100%;height: 30%;">
+        <input class='placeCenter' maxlength="36" placeholder="点击输入，限制36个字符" style="width: 85%;height: 100%;" bindblur="finishInputContent"></input>
+      </view>
+      <view class='displayFlexRow borderBottomSolid' style="width: 100%;height: 20%;">
+        <view class='placeCenter' style="width: 15%;height: 100%;font-weight:500;">地域</view>
+        <picker class='placeCenter' mode="region" bindchange="bindRegionChange" value="{{region}}"  style="width: 85%;height: 100%;font-size:11pt;text-decoration: underline;">{{region[0]}}-{{region[1]}}-{{region[2]}}</picker>
+
+        <!-- <view class='placeCenter' style="width: 85%;height: 100%;font-size:9pt;">{{address}}</view> -->
+      </view>
+      <view class='displayFlexRow borderBottomSolid' style="width: 100%;height: 20%;">
+        <view class='placeCenter' style="width: 15%;height: 100%;font-weight:400;">分类</view>
+        <picker></picker>
+        <picker class='placeCenter' style="width: 85%;height: 100%; font-size:13pt;text-decoration: underline;" bindchange="bindPickerChange" value="{{index}}" range="{{styleArray}}">{{styleArray[index]}}</picker>
+      </view>
+      <view class='displayFlexRow borderBottomSolid' style="width: 100%;height: 20%;">
+        <view class='placeCenter' style="width: 15%;height: 100%;font-weight:300;">备注</view>
+        <input class='placeCenter' maxlength="100" style="width: 85%;height: 100%;font-size:9pt;" placeholder="“点击输入，限制100个字符。”" bindblur="finishInputIntroduce"></input>
+      </view>
+    </view>
+  </view>
+  <view style="width: 100%;height: 13vh;"></view>
+  <!-- <view class='displayFlexColumn placeCenter' style="width: 100%;height: 13vh;">
+    <button class='placeCenter buttonBackgroundColor' style="width: 60%;height: 50%;font-size:11pt;" bindtap='gotoAcordingPage'>发布我的方言</button>
+    <view class='placeCenter' style="width: 100%;height: 30%;font-size:8pt;">点击发布该词条我的方言</view>
+  </view> -->
+  <view class='placeCenter' style="width: 100%;height: 25vh;">
+    <image class='placeCenter' src='/images/2.png' style="width: 90%;height: 100%;"></image>
+  </view>
+  <view class='displayFlexRow' style="width: 100%;height: 12vh;">
+    <view class='displayFlexColumn placeCenter' style="width: 50%;height: 100%;">
+      <button class='placeCenter buttonBackgroundColor' style="width: 70%;height: 40%;font-size:11pt;" bindtap='cancleSubmitButton'>取消</button>
+      <view class='placeCenter' style="width: 50%;height: 20%;font-size:8pt;">清空内容并退出</view>
+    </view>
+    <view class='displayFlexColumn placeCenter' style="width: 50%;height: 100%;">
+      <button class='placeCenter buttonBackgroundColor' style="width: 70%;height: 40%;font-size:11pt;" bindtap='submitTerm'>确认</button>
+      <view class='placeCenter' style="width: 50%;height: 20%;font-size:8pt;">发布该词条</view>
+    </view>
+  </view>
+
+
+</view>
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>

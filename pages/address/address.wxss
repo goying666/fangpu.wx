@@ -1,0 +1,4 @@
+/* pages/address/address.wxss */
+.blackBorderBottom{
+   border-bottom:  black solid 1px;
+}

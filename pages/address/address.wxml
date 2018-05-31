@@ -1,0 +1,18 @@
+<!--pages/address/address.wxml-->
+<view class='displayFlexColumn' style="width: 100%;height: 100vh;">
+  <view style="width: 100%;height: 30%;"></view>
+
+  <view class='placeCenter' style="width: 80%;height: 5%; font-size:11pt;">第一次登陆，请选择您擅长的方言地址</view>
+  <view class='placeCenter' style="width: 80%;height: 5%; font-size:11pt;">（后续可在“我的”界面进行修改）</view>
+
+  <view style="width: 100%;height: 5%;"></view>
+
+  <view class=' displayFlexRow' style="width: 80%;height: 10%;">
+    <view>当前为： </view>
+    <picker class='placeCenter blackBorderBottom' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">{{region[0]}}，{{region[1]}}，{{region[2]}}</picker>
+  </view>
+
+  <view style="width: 100%;height: 5%;"></view>
+
+  <button class='placeCenter buttonBackgroundColor' bindtap='finishButton' style="width: 70%;height: 7%;  font-size:11pt;">确认选择</button>
+</view>

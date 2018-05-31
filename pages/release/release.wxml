@@ -1,0 +1,49 @@
+<view class='displayFlexColumn allBackColor' style='width:100%;height:100vh'>
+  <!-- <view class='contentRowClass bottomLineClass displayFlexRow' style='width:100%;height:5vh'>
+    <text class='titleClass' style='width:5%;height:100%'>  </text>
+    <text class='titleClass' style='width:20%;height:100%'>  系统推送</text>
+  </view> -->
+  <view class='placeCenter' style='width:100%;height:90vh'>
+    <scroll-view scroll-y="true" style="width: 100%;height: 100%;">
+      <view class='displayFlexColumn contentRowClass' wx:for="{{todayterms}}" wx:for-item="todayterms" data-id="{{index}}" bindtap='oneterm'>
+        <view class='bottomLineClass contentRowClass' style="width: 95%;height: 13vh;">
+          <view class='placeCenter ' style="width: 100%;height: 50%;">
+            <scroll-view class='placeCenter ' style="width: 95%;height: 100%;">"{{todayterms.content}}"</scroll-view>
+          </view>
+          <view class='displayFlexRow' style="width: 100%;height: 50%;font-size:8pt;">
+            <view class='placeCenter' style="width: 10%;height: 100%;">
+              <image src='/images/release/class.png' style="width: 15px;height: 15px;"></image>
+            </view>
+            <view class='placeStart' style="width: 15%;height: 100%; font-size:12pt;">{{todayterms.termclass}}</view>
+            <view class='placeCenter' style="width: 10%;height: 100%;">
+              <image src='/images/search/zan.png' style="width: 15px;height: 15px;"></image>
+            </view>
+            <view class='placeStart' style="width: 15%;height: 100%; font-size:12pt;">{{todayterms.zannum}}</view>
+            <view class='placeCenter' style="width: 10%;height: 100%;">
+              <image src='/images/search/hui.png' style="width: 15px;height: 15px;"></image>
+            </view>
+            <view class='placeStart' style="width: 15%;height: 100%; font-size:12pt;">{{todayterms.recordingnum}}</view>
+             <view class='placeCenter' style="width: 10%;height: 100%;">
+              <image src='/images/er.png' style="width: 15px;height: 15px;"></image>
+            </view>
+            <view class='placeStart' style="width: 15%;height: 100%; font-size:12pt;">{{todayterms.tingnum}}</view>
+          </view>
+        </view>
+        <view style="width: 100%;height: 1vh;"></view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='placeCenter' style='width:100%;height:10vh'>
+    <button class='buttonBackgroundColor placeCenter' style='width:90%;height:70%;font-size:12pt;' bindtap='gotoTermsPages'>发布我自己的词条</button>
+  </view>
+</view>
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mycollection/mycollection",
+    "pages/myrecording/myrecording",
+    "pages/release/oneterm/onterm",
+    "pages/terms/terms",
+    "pages/rank/rank",
+    "pages/search/search",
+    "pages/address/address",
+    "pages/recording/recording",
+    "pages/mine/mine",
+    "pages/myterms/myterms",
+    "pages/release/release",
+    "pages/release/releaseterm/releaseterm",
+    "pages/release/releaserecording/releaserecording",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#393a3f",
+    "navigationBarTitleText": "方普2",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#ebebeb",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排名",
+        "iconPath": "/images/rank.png",
+        "selectedIconPath": "images/ranked.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查找",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/searched.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布",
+        "iconPath": "images/release.png",
+        "selectedIconPath": "images/released.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mined.png"
+      }
+    ]
+  }
+
+}

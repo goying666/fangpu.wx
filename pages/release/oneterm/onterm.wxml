@@ -1,0 +1,11 @@
+<!--pages/release/oneterm/onterm.wxml-->
+<text bindtap='goback'>pages/release/oneterm/onterm.wxml</text>
+<view>请用方言翻译如下内容：</view>
+<view>{{oneTermString}}</view>
+<button bindtouchstart="recordStart" bindtouchend="recordStop">长按录音</button>
+<button bindtap='playButton'>回放</button>
+<button bindtap='downloadButton'>下载</button>
+<input bindblur="inputover"></input>
+<button bindtap='submitButton'>确认提交</button>
+<view>限时：10S</view>
+

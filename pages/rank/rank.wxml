@@ -1,0 +1,98 @@
+<view class='allBackColor ' style="width: 100%;height: 100%;">
+  <!-- <view style="width: 100%;height: 10vh;">
+
+    <view class='placeCenter fangyanClass' style="width: 100%;height: 10vh;">排行榜</view>
+  </view> -->
+
+
+
+  <view style="width: 100%;height: 87vh;">
+    <scroll-view scroll-y="true" style="width: 100%;height: 100%;" bindscrolltolower="upnewtermlist">
+      <view class='displayFlexColumn' wx:for="{{termRanks}}" wx:for-item="termRanks" data-id="{{index}}" bindtap='gotoTermsOrRecordingPage' style="width: 100%;height: 13vh;">
+        <view class='displayFlexRow everyoneClass contentRowClass' style="width: 100%;height: 13vh;">
+          <view class='placeCenter indexClass' style="width: 15%;height: 100%;">{{index + 1}}</view>
+          <view class='displayFlexColumn' style="width: 85%;height: 100%; font-size:8pt;">
+            <view class='displayFlexRow' style="width: 100%;height: 55%;">
+              <view class='nickNameClass' style="width: 30%;height: 100%;">{{termRanks.usernickname}}</view>
+              <scroll-view scroll-x class='' style="width: 70%;height: 100%;">
+                <view class='termInfoClass' style="width: 1000%;height: 100%;font-size:12pt; font-weight:600;">"{{termRanks.content}}"</view>
+              </scroll-view>
+            </view>
+            <view class='displayFlexRow' style="width: 100%;height: 45%;">
+              <view class='placeCenter' style="width: 10%;height: 100%;">
+                <image src='/images/rank/zan.png' style="width: 15px;height: 15px;"></image>
+              </view>
+              <view class='zanNumClass' style="width: 15%;height: 100%;">{{termRanks.zannum}}</view>
+
+              <view class='placeCenter' style="width: 10%;height: 100%;">
+                <image src='/images/rank/hui.png' style="width: 15px;height: 15px;"></image>
+              </view>
+              <view class='tingNumClass' style="width: 15%;height: 100%;">{{termRanks.recordingnum}}</view>
+
+              <view class='placeCenter' style="width: 10%;height: 100%;">
+                <image src='/images/rank/address.png' style="width: 15px;height: 15px;"></image>
+              </view>
+              <scroll-view class='' style="width: 40%;height: 100%;">
+                <view class='userAddressClass' style="width: 1000%;height: 100%;">{{termRanks.address}}</view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  
+  <view class='placeCenter contentRowClass' style="width: 100%;height: 13vh;">
+    <view class='blackBorderYellowBack displayFlexRow' style="width: 97%;height: 95%; ">
+      <view class='displayFlexColumn' style="width: 15%;height: 100%; font-size:8pt;">
+        <!-- <text class='placeCenter' style="width: 100%;height: 45%; font-size:14pt; font-weight:600;">我的排名</text> -->
+        <text class='placeCenter' style="width: 100%;height: 100%; font-size:12pt;">{{myranknum}}</text>
+      </view>
+      <view class='placeCenter' style="width: 20%;height: 100%; font-size:8pt;">
+        <image class='' src='{{userInfo.avatarurl}}' style="width: 90%;height: 90%; font-size:8pt;"></image>
+      </view>
+      <view class='displayFlexColumn' style="width: 65%;height: 100%; font-size:8pt;">
+        <view class='displayFlexRow' style="width: 100%;height: 50%;">
+          <scroll-view style="width: 30%;height: 100%;font-size:12pt; font-weight:600;">
+            <view class='placeCenter' style="width: 100%;height: 100%;font-size:12pt; font-weight:600;">{{userInfo.nickname}}</view>
+          </scroll-view>
+
+          <view class='placeCenter' style="width: 10%;height: 100%;">
+            <image src='/images/rank/jia.png' style="width: 15px;height: 15px;"></image>
+          </view>
+          <scroll-view class='' style="width: 56%;height: 100%;font-size:10pt;">
+            <view class='userAddressClass' style="width: 100%;height: 100%;">{{userInfo.address[0]}},{{userInfo.address[1]}}</view>
+          </scroll-view>
+        </view>
+        <view class='displayFlexRow' style="width: 100%;height: 50%;">
+        
+          <view class='placeCenter' style="width: 10%;height: 100%;">
+            <image src='/images/rank/ci2.png' style="width: 15px;height: 15px;"></image>
+          </view>
+          <view class='placeStart' style="width: 23%;height: 100%;font-size:12pt;">{{userNum.mytermnum}}</view>
+          <view class='placeCenter' style="width: 10%;height: 100%;">
+            <image src='/images/rank/shuo.png' style="width: 15px;height: 15px;"></image>
+          </view>
+          <view class='placeStart' style="width: 23%;height: 100%;font-size:12pt;">{{userNum.myrecordingnum}}</view>
+          <view class='placeCenter' style="width: 10%;height: 100%;">
+            <image src='/images/rank/xin.png' style="width: 15px;height: 15px;"></image>
+          </view>
+          <view class='placeStart' style="width: 24%;height: 100%;font-size:12pt;">{{userNum.myallzannum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>
+
+<!--  -->

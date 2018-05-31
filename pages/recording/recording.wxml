@@ -1,0 +1,82 @@
+<view class='placeCenter allBackColor' style="width: 100%;height: 100%;">
+  <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+
+    <view class='displayFlexRow' style="width: 95%;height: 10vh;">
+      <view class='titleCitiaoClass' style="width: 25%;height: 100%; font-size:22pt;font-weight:bold;">方言</view>
+      <view class='displayFlexColumn' style="width: 75%;height: 100%;">
+        <!-- <view class='TermRuleClass' style="width: 100%;height: 40%;">规则说明</view> -->
+        <view class='displayFlexRow' style="width: 100%;height: 100%;">
+          <view class='titleCitiaoClass' style="width: 50%;height: 100%; font-size:9pt;font-weight:300;">赞:{{recordingInfo.zannum}}</view>
+          <!-- <view class='titleCitiaoClass' style="width: 50%;height: 100%; font-size:9pt;font-weight:300;">听:{{recordingInfo.tingnum}}</view> -->
+        </view>
+      </view>
+    </view>
+
+    <view class='displayFlexColumn' style="width: 90%;height: 35vh;">
+      <view class='placeCenter blackBorderBottom' style="width: 100%;height: 15vh; font-size:11pt;">{{recordingInfo.terminfo}}</view>
+      <view class='displayFlexRow' style="width: 90%;height: 17vh;">
+        <view class='displayFlexColumn' style="width: 75%;height: 100%;">
+          <view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">分类： {{recordingInfo.termclass}}</view>
+          <view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">作者： {{recordingInfo.usernickname}}</view>
+          <view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">时间： {{recordingInfo.addtime}}</view>
+          <scroll-view class='termStyleClass' style="width: 100%;height: 25%; font-size:9pt;">方言地：{{recordingInfo.address}}</scroll-view>
+        </view>
+        <view class='placeCenter' style="width: 25%;height: 100%;">
+          <image src='{{recordingInfo.useravatarurl}}' style="width: 60px;height: 60px;"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='displayFlexColumn' style="width: 90%;height: 20vh;">
+      <button class='placeCenter buttonBackgroundColor' style="width: 90%;height: 40%;font-size:12pt;" bindtap='playRecording'>听一下</button>
+      <!-- <view class='displayFlexRow' style="width: 90%; height: 30%;">
+        <view class='shoucangClass' style="width: 10%;height: 100%;font-size:9pt;">
+          <image src='{{shoupicture}}' style='width:10px;height:10px;'></image>
+        </view>
+        <view class='shoucangClass' style="width: 40%;height: 100%;font-size:9pt;">收藏</view>
+        <view class='jubaoClass' style="width: 50%;height: 100%;font-size:9pt;">快速举报</view>
+      </view> -->
+      <view class='placeCenter' style="width: 90%; height: 30%;font-size:9pt;"> 听完觉得如何？</view>
+    </view>
+
+    <view class='displayFlexRow' style="width: 95%;height: 20vh;">
+      <view class='displayFlexColumn' style="width: 50%;height: 20vh;">
+        <image src='{{badpicture}}' style="width: 50%;height: 50%;" bindtap='badbind'></image>
+        <view class='placeCenter' style="width: 50%;height: 25%;font-weight:bold;">听不懂</view>
+        <view class='placeCenter' style="width: 50%;height: 25%;">{{recordingInfo.badnum}}</view>
+      </view>
+      <view class='displayFlexColumn' style="width: 50%;height: 100%;">
+        <image src='{{zanpicture}}' style="width: 50%;height: 50%;" bindtap='zanbind'></image>
+        <view class='placeCenter' style="width: 50%;height: 25%;font-weight:bold;">说得好</view>
+        <view class='placeCenter' style="width: 50%;height: 25%;">{{recordingInfo.zannum}}</view>
+      </view>
+    </view>
+
+
+    <view class='placeCenter' style="width: 90%;height: 15vh;;">
+      <button class=' buttonBackgroundColor' style="width: 90%;height: 8vh;font-size:12pt;" bindtap='gotoReleaseRecording'>我来试试</button>
+    </view>
+  </view>
+</view>
+
+<view class='loadingclass' hidden="{{loadingFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/loading.gif' style="width: 30px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">加载中</view>
+    </view>
+  </view>
+</view>
+
+<view class='loadingclass' hidden="{{playFlag}}" style="width: 50%;height: 36%;">
+  <view class='' style="width: 100%;height: 100%;">
+    <view class='displayFlexColumn' style="width: 100%;height: 100%;">
+      <view class='loadingpictureClass' style="width: 80%;height: 100%; ">
+        <image class='placeCenter' src='/images/huifang.gif' style="width: 260px;height: 30px;"></image>
+      </view>
+      <view class='loadingtextClass' style="width: 80%;height: 100%; font-size:16pt;">回放中</view>
+    </view>
+  </view>
+</view>

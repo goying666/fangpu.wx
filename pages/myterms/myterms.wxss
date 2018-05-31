@@ -1,0 +1,14 @@
+/* pages/myterms/myterms.wxss */
+.borderBottomSolid{
+   border-bottom:  #666666 solid 1px;
+}
+.titleClassCitiao{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+
+.borderbottom1px{
+   border-bottom:  white solid 1px;
+}
